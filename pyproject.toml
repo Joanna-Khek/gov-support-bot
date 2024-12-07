@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+
+[project]
+name = "gov-support-bot"
+version = "0.1.0"
+description = "A conversational bot that recommends personalized government support schemes"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Joanna Khek Cuina", email = "joannakhek@gmail.com"}
+]
+dependencies = [
+    "ipykernel>=6.29.5",
+    "pandas>=2.2.3",
+    "selenium>=4.27.1",
+]
+
+[tool.setuptools.dynamic.version]
+attr = "gov_support_bot.__version__"
+
+[tool.setuptools.packages.find]
+namespaces = false
+where = ["src"]
