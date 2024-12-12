@@ -1,9 +1,5 @@
-import pandas as pd
-import hydra
 import time
-import json
 import selenium
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
@@ -37,8 +33,8 @@ class SchemesData:
                 .find_elements(By.TAG_NAME, "span"))
         for tag in tags:
             self.tags_list.append(tag.text)
-        
-        self.tags = " ".join(self.tags_list)
+        print(self.tags_list)
+        #self.tags = " ".join(self.tags_list)
         
     def _get_link(self):
         self.link = self.scheme.get_attribute("href")
@@ -52,6 +48,7 @@ class SchemesData:
         
         
     def _get_category(self):
+        time.sleep(1)
         categories = self.webdriver.find_element(By.CLASS_NAME, "category-wrapper").find_elements(By.TAG_NAME, "a")
         for cat in categories:
             self.category_list.append(cat.text)
