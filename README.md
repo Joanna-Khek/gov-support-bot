@@ -2,6 +2,8 @@
 Building on my experience with a [Naive RAG project](https://github.com/Joanna-Khek/hdb-bto-chatbot), I sought to delve deeper into the concept of Agentic RAG while incorporating advanced RAG features. This project represents the culmination of that exploration.
 
 ## Project Description
+![](https://github.com/Joanna-Khek/gov-support-bot/blob/main/assets/logo.png)
+
 This project leverages Retrieval-Augmented Generation (RAG) with an agentic workflow to assist users in finding support schemes that truly align with their needs. Unlike the current implementation on the [main website](https://supportgowhere.life.gov.sg/schemes), where users are limited to filtering schemes and often receive irrelevant results, this system ensures more personalized and precise recommendations.
 
 ![](https://github.com/Joanna-Khek/gov-support-bot/blob/main/assets/demo.gif)
