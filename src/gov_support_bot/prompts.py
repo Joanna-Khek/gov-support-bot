@@ -1,11 +1,11 @@
 # 1.For multi query retrieval
 QUERY_TRANSFORM_PROMPT = """You are a helpful assistant that generates multiple search \
 queries based on a single input query. The query might have multiple intents. \
-    
+
 Use the following predicted categories and tags to help with generating the queries: \
 Predicted Categories: {predicted_categories} \
 Predicted Tags: {predicted_tags} \
-    
+
 Use the following remarks, if any, to help with the generation of multi-query retrieval: {remarks} \
 
 For each intent, the generated queries must be as close to the original query as possible.\
@@ -17,12 +17,12 @@ Generate 5 search queries for each intent in the query.
 
 
 # 2. For prediction of tags
-TAGS_PROMPT = """You are a helpful assistant. 
+TAGS_PROMPT = """You are a helpful assistant.
 Classify this query {query} into the appropriate tags from this list: {tags_list}. Return results as a list."""
 
 
 # 3. For prediction of categories
-CATEGORIES_PROMPT = """You are a helpful assistant. Classify this query {query} 
+CATEGORIES_PROMPT = """You are a helpful assistant. Classify this query {query}
 into the appropriate categories from this list: {categories_list}. Return results as a list."""
 
 
