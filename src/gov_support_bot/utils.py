@@ -14,7 +14,8 @@ def load_data(filepath: str) -> pd.DataFrame:
     )
     data = loader.load()
     return data
-    
+
+
 def load_vector_store(name: str, k: int = 10):
     # Initialize embeddings (e.g., OpenAI embeddings)
     embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
@@ -23,12 +24,15 @@ def load_vector_store(name: str, k: int = 10):
     vector_store = FAISS.load_local(
         name, embeddings, allow_dangerous_deserialization=True
     )
-    
+
     # Define Retriever
-    retriever = vector_store.as_retriever(search_type="mmr", ## Maximum Marginal Relevance (MMR) for search
-                                        search_kwargs={"k": k})
-    
+    retriever = vector_store.as_retriever(
+        search_type="mmr",  ## Maximum Marginal Relevance (MMR) for search
+        search_kwargs={"k": k},
+    )
+
     return retriever
+
 
 def get_all_tags(data: List) -> List:
     """Obtain all unique tags
@@ -79,6 +83,7 @@ def filter_documents_by_tag(documents: list, target_tags: list) -> List:
         if any(tag in doc.metadata.get("tags", []) for tag in target_tags)
     ]
     return filtered_docs
+
 
 def filter_documents_by_category(raw_results: list, category_tags: list) -> List:
     """
