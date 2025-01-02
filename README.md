@@ -22,7 +22,7 @@ This project utilises [Langgraph](https://langchain-ai.github.io/langgraph/), wh
 
 - Given the query, the LLM first categorise it into different intents.
 - For each intent, a LLM will predict the tags and categories.
-- Human-in-the-loop is employed to obtain feedback. Users can modify the predicted tags and predicted categories.
+- Human-in-the-loop is employed to obtain feedback. Users can modify the predicted tags and predicted categories. Modifications will be made to the state of the graph.
 - Based on the query, multi-query retrieval is employed to generate multiple queries.
 - For each generated query, we obtain relevant documents from the FAISS vector store.
 - Then we rank these documents according to the reciprocal rank fusion methodology.
