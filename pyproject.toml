@@ -13,9 +13,19 @@ authors = [
     {name = "Joanna Khek Cuina", email = "joannakhek@gmail.com"}
 ]
 dependencies = [
+    "faiss-cpu>=1.9.0.post1",
     "ipykernel>=6.29.5",
+    "langchain-community>=0.3.11",
+    "langchain-milvus>=0.1.7",
+    "langchain-openai>=0.2.12",
+    "langgraph",
+    "langgraph-checkpoint-sqlite>=2.0.1",
+    "openai>=1.57.4",
     "pandas>=2.2.3",
+    "pymilvus[model]>=2.5.0",
+    "python-dotenv>=1.0.1",
     "selenium>=4.27.1",
+    "streamlit>=1.41.1",
 ]
 
 [tool.setuptools.dynamic.version]
