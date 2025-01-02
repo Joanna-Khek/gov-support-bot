@@ -22,6 +22,7 @@ dependencies = [
     "langgraph-checkpoint-sqlite>=2.0.1",
     "openai>=1.57.4",
     "pandas>=2.2.3",
+    "pre-commit>=4.0.1",
     "pymilvus[model]>=2.5.0",
     "python-dotenv>=1.0.1",
     "selenium>=4.27.1",
