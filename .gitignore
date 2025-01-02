@@ -4,3 +4,4 @@ data/
 notebooks/
 conf/
 *__pycache__
+.env
