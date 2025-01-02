@@ -4,7 +4,7 @@ Building on my experience with a [Naive RAG project](https://github.com/Joanna-K
 ## Project Description
 This project leverages Retrieval-Augmented Generation (RAG) with an agentic workflow to assist users in finding support schemes that truly align with their needs. Unlike the current implementation on the main website, where users are limited to filtering schemes and often receive irrelevant results, this system ensures more personalized and precise recommendations.
 
-![Picture2](https://github.com/user-attachments/assets/081f61e2-fbee-4152-89f5-68983a39b81c)
+![](https://github.com/Joanna-Khek/gov-support-bot/blob/main/assets/demo.gif)
 
 The key features of the project are:
 - **Multi-Query Retrieval**: Mitigates low-quality user queries by leveraging an LLM to generate multiple queries from different perspectives. For each query, a set of relevant documents is retrieved, ensuring a broader and more diverse context pool.
@@ -29,7 +29,3 @@ This project utilises [Langgraph](https://langchain-ai.github.io/langgraph/), wh
 - We then further filter the documents according to the predicted tags and categories to ensure that only the most relevant documents are returned and used as context.
 - An LLM will generate a response based on the context.
 - An evaluator LLM will assess whether the response is adequate. If it is, then the workflow will end. If not, the workflow goes back to generating multiple queries, where the remarks given by the evaluator LLM will be ingested so that we can improve on the queries generated.
-
-
-## Demo
-![](https://github.com/Joanna-Khek/gov-support-bot/blob/main/assets/demo.gif)
