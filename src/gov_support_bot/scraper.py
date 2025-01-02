@@ -116,20 +116,3 @@ class SchemesData:
         
         self.webdriver.close()
         self.webdriver.switch_to.window(self.webdriver.window_handles[-1])
-    
-        
-    
-        
-    
-    
-    
-    
-    
-    
-# def main():
-#     driver = webdriver.Chrome()
-#     driver.get(url)
-#     list_of_schemes = webdriver.find_elements(By.CLASS_NAME, "GrantCardWrapper-sc-bqo4pt-0")[0].find_elements(By.TAG_NAME, "a")
-    
-#     for scheme in list_of_schemes:
-        
